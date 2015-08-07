@@ -5,7 +5,7 @@ plot3 <- function (){
     powerCon$DateTime <- strptime( paste(powerCon$Date, powerCon$Time ), format="%d/%m/%Y %H:%M:%S")
     
     #plot the graph to a png (plotting to screen first gives bad sizing or is not platform independent)
-    png(png, filename = "plot3.png", width = 480, height = 480, units = "px")
+    png(filename = "plot3.png", width = 480, height = 480, units = "px")
     plot(powerCon$DateTime, powerCon$Sub_metering_1, type="n", xlab="", ylab="Energy sub metering" )
     lines(powerCon$DateTime, powerCon$Sub_metering_1, type="l", col="black")
     lines(powerCon$DateTime, powerCon$Sub_metering_2, type="l", col="red")
